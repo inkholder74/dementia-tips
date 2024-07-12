@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dementia Care Helper</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            text-align: center;
+            padding: 50px;
+        }
+        button {
+            padding: 15px 30px;
+            font-size: 18px;
+            margin: 10px;
+            cursor: pointer;
+        }
+        .tip {
+            margin-top: 20px;
+            font-size: 20px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Dementia Care Helper</h1>
+    <p>Click on a situation to get a helpful tip.</p>
+    
+    <button onclick="showTip('lonely_angry_confused')">Feeling Lonely, Angry, or Confused</button>
+    <button onclick="showTip('different_behavior')">Different Behavior</button>
+    <button onclick="showTip('suggest_activities')">Suggesting Activities</button>
+    <button onclick="showTip('skills_abilities')">Focusing on Skills and Abilities</button>
+    <button onclick="showTip('choices')">Offering Choices</button>
+    <button onclick="showTip('reduce_distractions')">Reducing Distractions</button>
+    <button onclick="showTip('hearing_vision')">Hearing and Vision Challenges</button>
+    <button onclick="showTip('clear_speech')">Clear and Simple Speech</button>
+    <button onclick="showTip('show_and_talk')">Show and Talk</button>
+    <button onclick="showTip('assess_daily')">Daily Assessment</button>
+    <button onclick="showTip('communicate_senses')">Communicate through Senses</button>
+    <button onclick="showTip('tone_and_body_language')">Tone and Body Language</button>
+    <button onclick="showTip('connect_instead_of_correct')">Connect Instead of Correct</button>
+    <button onclick="showTip('take_a_break')">Take a Break</button>
+    
+    <div class="tip" id="tip"></div>
+    
+    <script>
+        function showTip(situation) {
+            let tip = '';
+            switch(situation) {
+                case 'lonely_angry_confused':
+                    tip = "He might feel lonely, angry, or confused. Talk to him about his feelings. Stay calm, avoid confrontation, and validate his feelings. \nExample: 'I understand you're upset. Let's talk about what's bothering you.'";
+                    break;
+                case 'different_behavior':
+                    tip = "He may act differently. He may repeat himself, shout, or walk around more. Stay patient and try to redirect his attention. \nExample: 'I see you're feeling restless. Would you like to look at some old photos with me?'";
+                    break;
+                case 'suggest_activities':
+                    tip = "Use what you know about him to suggest conversation topics or activities he may enjoy. Focus on what he can do. \nExample: 'Would you like to listen to some music or read a book together?'";
+                    break;
+                case 'skills_abilities':
+                    tip = "Nurture his skills and abilities. Focus on what he can do instead of what he can't. \nExample: 'You always enjoyed ooking at birds. How about we look at one of our bird books together for a while?'";
+                    break;
+                case 'choices':
+                    tip = "When he is making a choice, offer him a couple of options that you know he will like. \nExample: 'Would you prefer tea or water?'";
+                    break;
+                case 'reduce_distractions':
+                    tip = "Take note of possible visual or auditory distractions in his environment and minimize them. \nExample: 'Let me turn off the TV so we can focus better.'";
+                    break;
+                case 'hearing_vision':
+                    tip = "Account for any hearing or vision challenges he may have. Make eye contact to help focus his attention. \nExample: 'Look at me. I want to make sure you hear me clearly.'";
+                    break;
+                case 'clear_speech':
+                    tip = "Speak clearly, using short and simple sentences. Avoid talking to him if you’re behind him or where he can’t see you. \nExample: 'Let's sit down and talk.'";
+                    break;
+                case 'show_and_talk':
+                    tip = "Show as well as talk. Using actions can help give your words meaning. \nExample: 'See how I’m doing this? Let's try it together.'";
+                    break;
+                case 'assess_daily':
+                    tip = "His abilities can change from day to day, so take a few moments at the beginning of the conversation to assess how he’s doing. \nExample: 'How are you feeling today? Do you need anything?'";
+                    break;
+                case 'communicate_senses':
+                    tip = "When he is unable to communicate verbally, communicate through the senses, like touch. \nExample: 'I'm here with you. Let’s hold hands.'";
+                    break;
+                case 'tone_and_body_language':
+                    tip = "Be aware of your own tone and body language. Model the mood. Connect instead of correct. \nExample: 'You're doing great. Let’s keep going.'";
+                    break;
+                case 'connect_instead_of_correct':
+                    tip = "Ignore mistakes and give encouragement. Connect instead of correct. \nExample: 'That’s okay. Let's try it this way.'";
+                    break;
+                case 'take_a_break':
+                    tip = "When you feel overwhelmed, take a step back and exhale. It's important to take care of yourself too. \nExample: 'I’ll be right back. I just need a moment.'";
+                    break;
+                default:
+                    tip = "Select a situation to get a helpful tip.";
+            }
+            document.getElementById('tip').innerText = tip;
+        }
+    </script>
+</body>
+</html>
